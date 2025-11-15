@@ -8,5 +8,29 @@ if(idx > -1){
 }else {
     console.log('item not found');
 }
+console.log(b.includes('aa'), 'item located');
 
-console.log(b.includes('aa'));
+const objArr = [
+    {
+        id: 1,
+        name: 'Bora'
+    },
+    {
+        id: 2,
+        name: 'Segun'
+    },
+    {
+        id: 3,
+        name: 'Muheez'
+    },
+];
+
+// callback functions
+const found = objArr.find(function (obj) {
+    console.log(obj, 'instance');
+    return obj.id === 2 && obj.name === 'SEgun';
+});
+
+// Arrow Function
+const anotherFind = objArr.find((obj) => obj.id === 2 && obj.name === 'Segun')
+console.log(anotherFind, 'found');
