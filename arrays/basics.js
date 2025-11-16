@@ -38,7 +38,6 @@ let u = b.splice(3, 1);
 // 3. remove element at the end
 let poped = b.pop();
 
-
 // EMPTYING ARRAYS
 // solution 1
 // b = [];
