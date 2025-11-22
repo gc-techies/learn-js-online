@@ -39,3 +39,19 @@ restFunction('a', 1);
 // second approach: recommended
 const spread = [...first, 'w', 8, ...second];
 const objArrSpread = [...objArrOne, ...objArrTwo];
+
+// Iterating arrays using forEach loop
+spread.forEach(function (element, index) {
+    // console.log(element, index);
+});
+
+// spread.forEach((element, index) => console.log(element, index));
+
+// Joining the elements of an array
+const joined = spread.join(',');
+console.log(joined);
+
+const txt = 'i love teaching students';
+const subStr = txt.split(' ');
+const joinedSubStr = subStr.join('+');
+console.log(joinedSubStr);
