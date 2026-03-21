@@ -1,7 +1,12 @@
 // DOM => Document Object Model
 let hONe = document.getElementById('h1_intro');
 hONe.innerText = 'Segun and Muheez are in JS Online class';
+let usernameField = document.getElementById('username');
+let btnShowUsername = document.getElementById('showUsername');
 
+btnShowUsername.addEventListener('click', () => {
+    console.log(usernameField.value);
+});
 let testRefClass = document.getElementsByClassName('test');
 console.log(testRefClass);
 
