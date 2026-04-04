@@ -1,21 +1,28 @@
 function Referee(name) {
+    // instance properties/members
     this.name = name;
     // Method 1 for getter
     this.getYellowList = function () {
-    }
-    // public function
-    this.assignCard = function (player, cardVal) {
+        return 'referee yellow list';
     }
 }
 
-let referee1 = new Referee('referee1');
+// prototype members/properties/methods
+Referee.prototype.assignCard = function () {
+    console.log('referee assigning card', this.getYellowList());
+}
 
+let referee1 = new Referee('referee1');
+let referee2 = new Referee('referee2');
+
+// object literal syntax
 let ref = {
     name: 'referee1',
     age: 45,
     gender: 'M',
 }
 
+// let ref = new Object();
 
 Object.defineProperty(ref, 'age', {
     configurable: false,
@@ -33,10 +40,10 @@ for (let prop in ref) {
 
 // Method 2: Using Object.keys()
 let props = Object.keys(ref);
-console.log(props);
+// console.log(props);
 
 // get reference to the prototype object of ref
 let proto = Object.getPrototypeOf(ref);
 const descriptor = Object.getOwnPropertyDescriptor(proto, 'toString');
-console.log(descriptor);
+// console.log(descriptor);
 // console.log(proto);
