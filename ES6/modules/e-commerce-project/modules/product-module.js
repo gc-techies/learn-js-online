@@ -10,6 +10,7 @@ export default class Product {
             category: obj.category,
             image: obj.image,
             rating: obj.rating,
+            quantity: 0,
         });
     }
 
@@ -32,6 +33,13 @@ export default class Product {
     }
     set price(value) {
         _props.get(this).price = value;
+    }
+
+    get quantity() {
+        return _props.get(this).quantity;
+    }
+    set quantity(value) {
+        _props.get(this).quantity = value;
     }
 
     get image() {
